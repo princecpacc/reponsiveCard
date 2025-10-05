@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Profile Card</title>
+
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 80vh;
+            width: 130vh; */
+            margin-left: 6%;
+            background-color: black;
+            margin-top: 36vh;
+            
+        }
+
+        .card{
+            display: flex;
+            width: 600px;
+            background-color: whitesmoke;
+            padding: 10px;
+            border-radius: 20px;
+            /* padding-right: 0; */
+        }
+
+        .profileimage{
+            height: 150px;
+            width: 150px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profileimage > img{
+            margin: 0;
+            padding: 0;
+    
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        h1{
+            display: block;
+            margin: 0;
+            padding: 0;
+            font-size: 1.5-2rem; 
+            font-weight: bold;
+        }
+
+        #left{
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+
+        #right{
+            display: flex;
+            flex-direction: column;
+            /* height: 150px; */
+            position: relative;
+        }
+
+        .info{
+            padding-left: 10px;
+            margin: auto;
+            margin-left: 10px;
+            
+        }
+
+        .button{
+            display: flex;
+            gap: 30px;
+            margin-left:30px;
+        }
+        
+
+        .button1{
+            /* height: 20px;
+            width: 40px; */
+            margin-left: 0;
+            /* position: absolute; */
+            bottom: 0;
+            
+        }
+
+        .button1 button{
+            background-color: rgb(8, 74, 172);
+            border: none;
+            border-radius: 3px;
+            color: white;
+            transition: 0.4s ease;
+            padding: 6px 12px;
+        }
+
+        .button2{
+            /* height: 20px;
+            width: 40px; */
+            /* position: absolute; */
+            left: 100px;
+            bottom: 0;
+            
+        }
+
+        .button2 button{
+            background-color: rgb(8, 74, 172);
+            border: none;
+            border-radius: 3px;
+            color: white;
+            transition: 0.4s ease;
+            padding: 6px 12px;
+        }
+
+        .button1 button:hover{
+            padding: 5px;
+        }
+
+        .button2 button:hover{
+            padding: 5px;
+        }
+
+        @media (max-width: 640px){
+
+            #left{
+                margin: auto;
+                text-align: center;
+            }
+
+            .card{
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+             #right{
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            .button{
+                position: static;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                margin: 0;
+            }
+
+            .button1 button, .button2 button{
+                gap: 0;
+                padding: 2px;
+                margin: 2px;
+                width: 100%;
+            }
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="left">
+            <div class="profileimage">
+                <img src="photo/profile.jpeg" alt="profile pic">
+            </div>
+            <h1>Prince</h1>
+        </div>
+        
+        <div id="right">
+            <div class="info">
+                <p>Competitive programmer learning c++ and java. Love playing volleyball, basketball, and badminton</p>
+            </div>
+
+            <div class="button">
+                <div class="button1">
+                    <button>Contact</button>
+                </div>
+                <div class="button2">
+                    <button>Portfolio</button>
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+</body>
+</html>
